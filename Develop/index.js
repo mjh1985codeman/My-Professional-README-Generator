@@ -25,6 +25,48 @@ const questions = () => {
       name: "description",
       message: "Please include a description of your project.",
     },
+
+    {
+      type: "input",
+      name: "githubURL",
+      message: "What is the gitHubURL for your project? (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter the gitHub URL for your project!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Enter your email address:",
+    },
+    {
+      type: "input",
+      name: "installation",
+      message:
+        "Please provide a step-by-step description of to install your project. (Required)",
+    },
+    {
+      type: "list",
+      name: "license",
+      message: "Please choose a license from the provided list.",
+      choices: ["MIT", "GPL", "APACHE", "BOOST"],
+    },
+    {
+      type: "input",
+      name: "contribution",
+      message:
+        "Are their any contribution requirements/restrictions for your project?",
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "Please advise on how to test your application:",
+    },
   ]);
 };
 
