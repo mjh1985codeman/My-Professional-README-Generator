@@ -70,7 +70,9 @@ const questionsArray = [
 ];
 //Used inquirer to capture the responses from the questions.
 inquirer.prompt(questionsArray).then((responses) => {
-  console.log(responses);
+  console.log(responses.title);
+  //created const variable fileName to the utils dir for the generateMarkdown js file
+  const fileName = "";
 });
 
 // TODO: Create a function to write README file
