@@ -1,3 +1,5 @@
+![License: 'MIT'](https://img.shields.io/badge/license-MIT-green)
+
 # My-Professional-README-Generator
 
 ## User Story
