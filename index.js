@@ -65,7 +65,7 @@ inquirer
       type: "list",
       name: "license",
       message: "Please choose a license from the provided list.",
-      choices: ["MIT", "GPL", "APACHE", "BOOST"],
+      choices: ["MIT", "GPL", "APACHE", "None"],
     },
     {
       type: "input",
@@ -83,20 +83,12 @@ inquirer
   .then(function (data) {
     // saves the input as a variable and pushes it to the renderReadme function.
     const template = generateMarkdown(data);
+
     //writes the template variable (renderReadme(Data)) as a ReadMe.MD file and saves it to the Dist subfolder
     fs.writeFile("./Dist/ReadMe.MD", template, function (err) {
       if (err) {
         return console.log(err);
       }
-      console.log("Success!!!");
+      console.log("Success!!!  Checkout the Dist Folder to see your ReadMe!!");
     });
   });
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-
-init();
