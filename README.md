@@ -4,7 +4,7 @@
 AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project.
 
 ## Video of Application in use: 
-<iframe src="https://drive.google.com/file/d/1a6buhCZzJsGVPYEdoRD1_Pmh7qFRavga/preview" width="640" height="480"></iframe>
+Click [Here](https://www.youtube.com/watch?v=jYfiesqaq74) for a video demonstration of this application in use!
 (See Dist Folder for an Example of a ReadMe that was Generated using this application). 
 
 ## Instalation & Usage.
