@@ -65,7 +65,7 @@ inquirer
       type: "list",
       name: "license",
       message: "Please choose a license from the provided list.",
-      choices: ["MIT", "GPL", "APACHE", "None"],
+      choices: ["MIT", "GPL", "APACHE"],
     },
     {
       type: "input",

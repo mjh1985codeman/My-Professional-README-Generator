@@ -8,17 +8,13 @@ const licenses = {
     "![License: 'APACHE'](https://img.shields.io/badge/license-Apache-blue)",
   None: "N/A",
 };
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(data) {}
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(data) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(data) {}
+const licenseLinks = {
+  MIT: "[Here](https://www.mit.edu/~amini/LICENSE.md)",
+  GPL: "[Here](https://www.gnu.org/licenses/gpl-3.0.en.html)",
+  APACHE: "[Here](https://www.apache.org/licenses/LICENSE-2.0)",
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -27,10 +23,9 @@ function generateMarkdown(data) {
 
   ## License
   ${licenses[data.license]}
+
+  Click ${licenseLinks[data.license]} for license information.
  
-
-
-
   ## Table of Contents
   * [Project-Description](#Project-Description)  
   * [GitHub-URL](#GitHub-URL)
