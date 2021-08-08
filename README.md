@@ -1,9 +1,22 @@
-# User Story
-AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project
+# My-Professional-README-Generator
 
-## Acceptance Criteria
-GIVEN a command-line application that accepts user input WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions WHEN I enter my project title THEN this is displayed as the title of the README WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests WHEN I choose a license for my application from a list of options THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under WHEN I enter my GitHub username THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile WHEN I enter my email address THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README
+## User Story
+AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project.
 
 ## Video of Application in use: 
-
+<iframe src="https://drive.google.com/file/d/1a6buhCZzJsGVPYEdoRD1_Pmh7qFRavga/preview" width="640" height="480"></iframe>
 (See Dist Folder for an Example of a ReadMe that was Generated using this application). 
+
+## Instalation & Usage.
+
+To run this application you will need to do the following:
+
+* Install VS Code. 
+* Clone this Repository: https://github.com/mjh1985codeman/My-Professional-README-Generator
+* Using the Integrated Terminal in VS Code Navigate to the "Project" Folder.
+* Run this command: "node index.js"
+* Answer the Questions!
+* Once you are done navigate to the "Dist" Sub-Folder and look at your new ReadMe! 
+
+## GitHub URL: 
+https://github.com/mjh1985codeman/My-Professional-README-Generator
