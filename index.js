@@ -1,18 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateMarkdown = require("./utils/generateMarkdown.js");
-
-// ReadMe Template that gets generated based on the user input.
-const renderReadme = (input) => {
-  return `
-  # ${input.title}
-
-  ## Project Description
-  ${input.description}
-
-  `;
-};
+//Variable that links the generateMarkdown function on the generateMarkdown.js file in the utils sub folder.
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -34,13 +24,23 @@ inquirer
     {
       type: "input",
       name: "description",
-      message: "Please include a description of your project.",
+      message: "Please include a description of your project. (Required)",
+      //validation.
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter a description of your project!");
+          return false;
+        }
+      },
     },
 
     {
       type: "input",
       name: "githubURL",
       message: "What is the gitHubURL for your project? (Required)",
+      //validation.
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -53,7 +53,7 @@ inquirer
     {
       type: "input",
       name: "email",
-      message: "Enter your email address:",
+      message: "Enter your email address.",
     },
     {
       type: "input",
@@ -82,7 +82,7 @@ inquirer
   // captures data from the user input
   .then(function (data) {
     // saves the input as a variable and pushes it to the renderReadme function.
-    const template = renderReadme(data);
+    const template = generateMarkdown(data);
     //writes the template variable (renderReadme(Data)) as a ReadMe.MD file and saves it to the Dist subfolder
     fs.writeFile("./Dist/ReadMe.MD", template, function (err) {
       if (err) {
